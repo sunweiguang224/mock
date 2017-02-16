@@ -1,0 +1,54 @@
+@charset "UTF-8";
+@import '../../../common/css/util/variable';
+@import '../../../common/css/util/_mixin';
+//@import '_icon';
+
+.grid {
+  margin: auto;
+  width: 80%;
+  .row {
+    padding: 5px;
+    &:not(:last-of-type){
+      border-top: 1px solid #ddd;
+    }
+    .field {
+      padding: 5px 10px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .operator {
+      width: 120px;
+      .btn{
+        padding: 3px;
+        cursor: pointer;
+        margin-left: 2px;
+      }
+    }
+    .num {
+      width: 30px;
+    }
+    .path {
+      width: 130px;
+    }
+    .json {
+      width: 330px;
+      @include ellipsis(1);
+    }
+    .des {
+      width: 120px;
+      @include ellipsis(1);
+    }
+    .mock {
+      width: 320px;
+    }
+    &.add {
+      text-align: center;
+      #addBtn {
+        margin-top: 10px;
+        padding: 5px 15px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
