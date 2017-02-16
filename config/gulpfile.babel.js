@@ -145,7 +145,7 @@ gulp.task('task_img_dev', () => {
 });
 gulp.task('task_img_dist', () => {
   return compileImg()
-    .pipe(imagemin())
+    // .pipe(imagemin())
     .pipe(gulp.dest(Path.distRoot))
     .pipe(size({showFiles: true}));
 });
