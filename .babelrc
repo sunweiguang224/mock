@@ -1,0 +1,13 @@
+// babel配置文件（提供给gulpfile.babel.js使用）
+// http://babeljs.cn/docs/plugins/
+{
+     "presets": [
+       "es2015",
+       "stage-0",
+       "stage-1",
+       "stage-2",
+       "stage-3",
+       "react"
+     ],
+     "plugins": []
+ }

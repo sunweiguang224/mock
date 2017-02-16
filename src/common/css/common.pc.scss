@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+@import 'lib/normalize';
+@import 'util/variable';
+@import 'util/mixin';
+@import 'util/_all';
+@import 'util/reset';
+@import 'icon/_icon1';
+
+body{
+  background-color: #f6f6f6;
+}
+
+.none{
+  display: none !important;
+}
+.hidden{
+  visibility: hidden !important;
+}
+
+/*外层容器*/
+.g-container {
+  width: $gContainerWith;
+  margin: 0 auto;
+}
+
+

@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@import '../../../common/css/util/variable';
+@import '../../../common/css/util/_mixin';
+//@import '_icon';
+
+.form {
+  margin: auto;
+  width: 500px;
+  .item {
+    margin: 10px auto;
+    white-space: nowrap;
+  }
+  .item.submit{
+    text-align: center;
+  }
+  .field, .input {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .field {
+    width: 100px;
+  }
+  .input {
+    width: 400px;
+    * {
+      width: 100%;
+    }
+  }
+  #json {
+    height: 500px;
+  }
+  #submit {
+    padding: 5px 30px;
+    cursor: pointer;
+  }
+}
+

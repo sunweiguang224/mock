@@ -1,0 +1,48 @@
+// comment 图片:
+$comment-width: (16px);
+$comment-height: (16px);
+$comment-bg-image: '_icon.png';
+$comment-bg-position: (0px) (0px);
+$comment-bg-size: (42px) (16px);
+/*
+.i-comment{
+  display: inline-block;
+  width: $comment-width;
+  height: $comment-height;
+  background: $comment-bg-image $comment-bg-position no-repeat;
+  background-size: $comment-bg-size;
+}
+*/
+@mixin i-comment($path: '../img/'){
+  content: '';
+  display: inline-block;
+  width: $comment-width;
+  height: $comment-height;
+  background: url($path + $comment-bg-image) $comment-bg-position no-repeat;
+  background-size: $comment-bg-size;
+}
+
+// redStar 图片:
+$redStar-width: (16px);
+$redStar-height: (16px);
+$redStar-bg-image: '_icon.png';
+$redStar-bg-position: (-26px) (0px);
+$redStar-bg-size: (42px) (16px);
+/*
+.i-redStar{
+  display: inline-block;
+  width: $redStar-width;
+  height: $redStar-height;
+  background: $redStar-bg-image $redStar-bg-position no-repeat;
+  background-size: $redStar-bg-size;
+}
+*/
+@mixin i-redStar($path: '../img/'){
+  content: '';
+  display: inline-block;
+  width: $redStar-width;
+  height: $redStar-height;
+  background: url($path + $redStar-bg-image) $redStar-bg-position no-repeat;
+  background-size: $redStar-bg-size;
+}
+

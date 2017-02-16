@@ -1,0 +1,22 @@
+@import '../../common/css/common.pc.scss';
+
+@mixin m-multiLine($line: 2) {
+  /* 多行文本展开收起 */
+  .m-multiLine {
+    @include ellipsis($line);
+    position: relative;
+    cursor: pointer;
+  }
+
+  .m-multiLine.expand {
+    display: block;
+  }
+
+  .m-multiLine-heightTest {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    z-index: -1;
+    font-size: inherit;
+  }
+}

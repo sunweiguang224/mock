@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>${{title}}</title>
+	<meta name="keywords" content="${{title}}"/>
+	<meta name="description" content="${{title}}"/>
+	@@include('src/common/tpl/meta.pc.tpl')
+  <link rel="stylesheet" href="{{path}}/common/css/common.pc{{min}}.css">
+	<link rel="stylesheet" href="{{path}}/page/${{name}}/css/${{name}}{{min}}.css">
+</head>
+<body>
+	<div class="g-container">
+
+	</div>
+	<script src="{{path}}/common/js/common.bundle{{min}}.js"></script>
+	<script src="{{path}}/page/${{name}}/js/${{name}}.bundle{{min}}.js"></script>
+</body>
+</html>

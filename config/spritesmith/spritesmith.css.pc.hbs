@@ -1,0 +1,26 @@
+{{#sprites}}
+// {{name}} 图片:
+${{name}}-width: ({{width}}px);
+${{name}}-height: ({{height}}px);
+${{name}}-bg-image: '{{escaped_image}}';
+${{name}}-bg-position: ({{offset_x}}px) ({{offset_y}}px);
+${{name}}-bg-size: ({{total_width}}px) ({{total_height}}px);
+/*
+.i-{{name}}{
+  display: inline-block;
+  width: ${{name}}-width;
+  height: ${{name}}-height;
+  background: ${{name}}-bg-image ${{name}}-bg-position no-repeat;
+  background-size: ${{name}}-bg-size;
+}
+*/
+@mixin i-{{name}}($path: '../img/'){
+  content: '';
+  display: inline-block;
+  width: ${{name}}-width;
+  height: ${{name}}-height;
+  background: url($path + ${{name}}-bg-image) ${{name}}-bg-position no-repeat;
+  background-size: ${{name}}-bg-size;
+}
+
+{{/sprites}}

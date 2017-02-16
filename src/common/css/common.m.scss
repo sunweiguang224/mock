@@ -1,0 +1,26 @@
+@charset "UTF-8";
+@import 'util/variable';
+@import 'util/mixin';
+@import 'lib/normalize';
+@import 'util/reset';
+@import 'icon/_icon1';
+
+/*页面容器宽度*/
+$containerMinWidth: 360px;
+$containerMaxWidth: 720px;
+
+/*外层容器*/
+.g-container {
+  min-width: $containerMinWidth;
+  max-width: $containerMaxWidth;
+}
+/**/
+@media screen and (min-width: $containerMaxWidth) {
+  .g-container {
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+  }
+}
+
+

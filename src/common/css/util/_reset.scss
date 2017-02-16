@@ -1,0 +1,39 @@
+/*样式重置*/
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+ul {
+  list-style-position: inside;
+  padding-left: 0;  // 去掉_normalize.scss中的padding-left: 40px;
+  margin: 0;  // 去掉_normalize.scss中的margin: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+iframe {
+  border: none;
+}
+
+:before,
+:after{
+  vertical-align: middle;
+}

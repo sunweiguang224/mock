@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{if id}}修改模拟数据{{else}}添加模拟数据{{/if}}</title>
+	<meta name="keywords" content="添加模拟数据"/>
+	<meta name="description" content="添加模拟数据"/>
+	@@include('src/common/tpl/meta.pc.tpl')
+  <link rel="stylesheet" href="{{path}}/common/css/common.pc{{min}}.css">
+	<link rel="stylesheet" href="{{path}}/page/mockAdd/css/mockAdd{{min}}.css">
+</head>
+<body>
+	<div class="g-container">
+    <div class="form">
+      <div class="item">
+        <span class="field">路径:</span>
+        <span class="input">
+          <input id="path" type="text" value="{{path || '/mock/xxx.go'}}">
+        </span>
+      </div>
+      <div class="item">
+        <span class="field">数据生成规则:</span>
+        <span class="input">
+          <textarea id="json">{{json | jsonFormat}}</textarea>
+        </span>
+      </div>
+      <div class="item">
+        <span class="field">接口说明:</span>
+        <span class="input">
+          <input id="des" value="{{des}}" />
+        </span>
+      </div>
+      <div class="item submit">
+        <button id="submit">{{if id}}修改{{else}}新增{{/if}}</button>
+      </div>
+    </div>
+	</div>
+	<script src="{{path}}/common/js/common.bundle{{min}}.js"></script>
+	<script src="{{path}}/page/mockAdd/js/mockAdd.bundle{{min}}.js"></script>
+</body>
+</html>

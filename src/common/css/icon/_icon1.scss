@@ -1,0 +1,48 @@
+// a1 图片:
+$a1-width: (16px);
+$a1-height: (16px);
+$a1-bg-image: '_icon1.png';
+$a1-bg-position: (0px) (0px);
+$a1-bg-size: (42px) (16px);
+/*
+.i-a1{
+  display: inline-block;
+  width: $a1-width;
+  height: $a1-height;
+  background: $a1-bg-image $a1-bg-position no-repeat;
+  background-size: $a1-bg-size;
+}
+*/
+@mixin i-a1($path: '../img/'){
+  content: '';
+  display: inline-block;
+  width: $a1-width;
+  height: $a1-height;
+  background: url($path + $a1-bg-image) $a1-bg-position no-repeat;
+  background-size: $a1-bg-size;
+}
+
+// a2 图片:
+$a2-width: (16px);
+$a2-height: (16px);
+$a2-bg-image: '_icon1.png';
+$a2-bg-position: (-26px) (0px);
+$a2-bg-size: (42px) (16px);
+/*
+.i-a2{
+  display: inline-block;
+  width: $a2-width;
+  height: $a2-height;
+  background: $a2-bg-image $a2-bg-position no-repeat;
+  background-size: $a2-bg-size;
+}
+*/
+@mixin i-a2($path: '../img/'){
+  content: '';
+  display: inline-block;
+  width: $a2-width;
+  height: $a2-height;
+  background: url($path + $a2-bg-image) $a2-bg-position no-repeat;
+  background-size: $a2-bg-size;
+}
+
