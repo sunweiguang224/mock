@@ -325,22 +325,24 @@ let entry = {
   }
 };
 gulp.task('default', function () {
-  // inquirer.prompt([
-  //   {
-  //     type: 'rawlist',
-  //     name: 'env',
-  //     message: 'please choose environment:',
-  //     choices: [
-  //       'staticDev',
-  //       'staticDist',
-  //       'serverDev',
-  //       'serverDist'
-  //     ]
-  //   }
-  // ]).then((answer) => {
-  //   entry[answer.env]();
-  // });
-  entry['serverDev']();
+  inquirer.prompt([
+    {
+      type: 'rawlist',
+      name: 'env',
+      message: 'please choose environment:',
+      choices: [
+        'staticDev',
+        'staticDist',
+        'serverDev',
+        'serverDist'
+      ]
+    }
+  ]).then((answer) => {
+    entry[answer.env]();
+  });
+});
+gulp.task('build', function () {
+  entry['serverDist']();
 });
 
 // ************************************ 创建新模块(npm run create) ************************************

@@ -13,11 +13,11 @@ router.get('/mockAdd', function (req, res, next) {
       connection.query('SELECT * from mock where id=' + req.query.id, function (err, rows, fields) {
         if (err) throw err;
         console.log(JSON.stringify(rows[0]));
-        res.render(__dirname + '/../../../dev/page/mockAdd/mockAdd.html', rows[0]);
+        res.render(`${__dirname}/mockAdd.html`, rows[0]);
       });
     });
   } else {
-    res.render(__dirname + '/../../../dev/page/mockAdd/mockAdd.html');
+    res.render(`${__dirname}/mockAdd.html`);
   }
 });
 
