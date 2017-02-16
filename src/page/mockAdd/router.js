@@ -28,7 +28,7 @@ router.get('/mockAdd_interface', function (req, res, next) {
       id: req.query.id,
       path: req.query.path,
       json: req.query.json,
-      desc: req.query.desc,
+      des: req.query.des,
     });
     db(function (connection) {
       connection.query('update mock set des = ?, path = ?, json = ? where id = ?', [
@@ -51,7 +51,7 @@ router.get('/mockAdd_interface', function (req, res, next) {
       connection.query('insert into mock set ?', {
         path: req.query.path,
         json: req.query.json,
-        desc: req.query.desc,
+        des: req.query.des,
       }, function (err) {
         var result = '添加成功';
         if (err) {
